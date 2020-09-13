@@ -63,4 +63,4 @@ function clearAll() {
     highestMarkedPos = 0;
 }
 
-BubbleSort.run(array);
+//BubbleSort.run(array);
