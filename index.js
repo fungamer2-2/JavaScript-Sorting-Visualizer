@@ -23,3 +23,7 @@ function shuffleArray(array) {
         var tmp = array[i]; array[i] = array[j]; array[j] = tmp;
     }
 }
+
+var arrayLength = 64
+
+var array = generateArray(arrayLength);
