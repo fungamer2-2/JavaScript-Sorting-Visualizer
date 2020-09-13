@@ -1,12 +1,17 @@
 var canvas = document.getElementById("renderer");
 var ctx = canvas.getContext("2d");
-ctx.fillStyle = "black";
-ctx.fillRect(0, 0, canvas.width, canvas.height);
 
 alert("Welcome to fungamer2's Sorting Visualizer!\nNote: This visualizer is in pre-alpha and is not fully developed");
 
 function render(array) {
+    ctx.fillStyle = "black";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    var barWidth = canvas.width / array.length;
     
+    ctx.fillStyle = "white";
+    for (var i = 0; i < array.length; i++) {
+        ctx.fillRect(0, canvas.height, i * barWidth, -array[i] * canvas.height/ array.length);
+    }
 }
 
 function generateArray(length) {
@@ -27,3 +32,5 @@ function shuffleArray(array) {
 var arrayLength = 64
 
 var array = generateArray(arrayLength);
+shuffleArray(array);
+render(array);
