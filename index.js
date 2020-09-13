@@ -62,3 +62,5 @@ function clearAll() {
     mark.fill(-1, 0, highestMarkedPos);
     highestMarkedPos = 0;
 }
+
+BubbleSort.run(array);
