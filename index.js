@@ -22,7 +22,7 @@ function generateArray(length) {
     return array;
 }
 
-function shuffleArray(array) {
+function shuffle(array) {
     for (var i = 0; i < length - 1; i++) {
         var j = i + Math.floor(Math.random() * (length - i));
         var tmp = array[i]; array[i] = array[j]; array[j] = tmp;
@@ -32,5 +32,5 @@ function shuffleArray(array) {
 var arrayLength = 64
 
 var array = generateArray(arrayLength);
-shuffleArray(array);
+shuffle(array);
 render(array);
