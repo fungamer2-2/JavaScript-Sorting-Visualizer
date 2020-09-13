@@ -10,7 +10,7 @@ function render(array) {
     
     ctx.fillStyle = "white";
     for (var i = 0; i < array.length; i++) {
-        ctx.fillRect(0, canvas.height, i * barWidth, -array[i] * canvas.height/ array.length);
+        ctx.fillRect(0, canvas.height, i * barWidth, -array[i] * canvas.height / array.length);
     }
 }
 
