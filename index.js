@@ -8,8 +8,8 @@ function render(array) {
     ctx.fillRect(0, 0, canvas.width, canvas.height);
     var barWidth = canvas.width / array.length;
     
-    ctx.fillStyle = "white";
     for (var i = 0; i < array.length; i++) {
+        ctx.fillStyle = hasMarkerPosition(i) ? "red" : "white";
         ctx.fillRect(i * barWidth, canvas.height, barWidth, -array[i] * canvas.height / array.length);
     }
 }
