@@ -4,4 +4,4 @@ I am working on creating a sorting algorithm visualizer in JavaScript
 
 Note: This visualizer is in pre-alpha and hasn't been fully developed yet
 
-Link: http://sorting-visualizer-fungamer2.net/
+Link: https://fungamer2-2.github.io/JavaScript-Sorting-Visualizer/
