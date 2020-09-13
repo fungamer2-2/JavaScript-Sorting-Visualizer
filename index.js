@@ -23,7 +23,7 @@ function generateArray(length) {
 }
 
 function shuffle(array) {
-    for (var i = 0; i < length - 1; i++) {
+    for (var i = 0; i < array.length - 1; i++) {
         var j = i + Math.floor(Math.random() * (length - i));
         var tmp = array[i]; array[i] = array[j]; array[j] = tmp;
     }
