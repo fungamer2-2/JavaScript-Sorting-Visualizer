@@ -9,7 +9,7 @@ BubbleSort.run = async function(array) {
             mark(0, j);
             mark(1, j + 1);
             if (array[j] > array[j + 1]) swap(array, j, j + 1);
-            await sleep(30);
+            await sleep();
             render(array);
         }
     }
