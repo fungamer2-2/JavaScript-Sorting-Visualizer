@@ -54,7 +54,7 @@ function hasMarkerPosition(pos) {
 function clearMark(pos) {
     markers[pos] = -1;
     if (pos == highestMarkedPos) {
-        for (highestMarkedPos = pos - 1; highestMarkedPos >= 0 && mark[highestMarkedPos] == -1; highestMarkedPos--);
+        for (highestMarkedPos = pos - 1; highestMarkedPos >= 0 && markers[highestMarkedPos] == -1; highestMarkedPos--);
     }
 }
 
