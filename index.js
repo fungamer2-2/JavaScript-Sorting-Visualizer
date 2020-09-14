@@ -29,7 +29,7 @@ function shuffle(array) {
     }
 }
 
-function swap(i, j) {
+function swap(array, i, j) {
     var tmp = array[i]; array[i] = array[j]; array[j] = tmp;
 }
 
