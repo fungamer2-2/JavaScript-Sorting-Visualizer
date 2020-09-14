@@ -3,6 +3,13 @@ var ctx = canvas.getContext("2d");
 
 alert("Welcome to fungamer2's Sorting Visualizer!\nNote: This visualizer is in pre-alpha and is not fully developed");
 
+var algorithms = {
+    "Bubble Sort": BubbleSort
+}
+
+var selectAlgorithm = document.createElement("SELECT")
+var delayMs = 30;
+
 function render(array) {
     ctx.fillStyle = "black";
     ctx.fillRect(0, 0, canvas.width, canvas.height);
@@ -34,7 +41,8 @@ function swap(arr, i, j) {
 }
 
 function sleep(ms) {
-  return new Promise(resolve => setTimeout(resolve, ms));
+    if (ms == undefined) ms = delayMs;
+    return new Promise(resolve => setTimeout(resolve, ms));
 }
 
 var arrayLength = 64
@@ -71,4 +79,6 @@ function clearAll() {
     highestMarkedPos = 0;
 }
 
-//BubbleSort.run(array);
+
+
+await BubbleSort.run(array);
