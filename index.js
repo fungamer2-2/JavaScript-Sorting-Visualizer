@@ -3,10 +3,6 @@ var ctx = canvas.getContext("2d");
 
 alert("Welcome to fungamer2's Sorting Visualizer!\nNote: This visualizer is in pre-alpha and is not fully developed");
 
-var algorithms = {
-    "Bubble Sort": BubbleSort
-}
-
 var delaySlider = document.getElementById("delaySlider");
 
 var selectAlgorithm = document.createElement("SELECT")
@@ -85,4 +81,6 @@ function clearAll() {
 
 
 
-BubbleSort.run(array);
+var algorithms = {
+    "Bubble Sort": BubbleSort
+}
