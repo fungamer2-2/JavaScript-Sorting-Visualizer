@@ -85,4 +85,4 @@ function clearAll() {
 
 
 
-await BubbleSort.run(array);
+BubbleSort.run(array);
