@@ -33,6 +33,14 @@ function swap(arr, i, j) {
     var tmp = arr[i]; arr[i] = arr[j]; arr[j] = tmp;
 }
 
+function sleep(milliseconds) {
+  const date = Date.now();
+  let currentDate = null;
+  do {
+    currentDate = Date.now();
+  } while (currentDate - date < milliseconds);
+}
+
 var arrayLength = 64
 
 var array = generateArray(arrayLength);
