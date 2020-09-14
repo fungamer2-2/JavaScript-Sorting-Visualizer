@@ -7,8 +7,12 @@ var algorithms = {
     "Bubble Sort": BubbleSort
 }
 
+var delaySlider = document.getElementById("delaySlider");
+
 var selectAlgorithm = document.createElement("SELECT")
 var delayMs = 30;
+
+delaySlider.value = delayMs;
 
 function render(array) {
     ctx.fillStyle = "black";
@@ -41,11 +45,11 @@ function swap(arr, i, j) {
 }
 
 function sleep(ms) {
-    if (ms == undefined) ms = delayMs;
+    if (ms == undefined) ms = delaySlider.value;
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-var arrayLength = 64
+var arrayLength = 64;
 
 var array = generateArray(arrayLength);
 shuffle(array);
