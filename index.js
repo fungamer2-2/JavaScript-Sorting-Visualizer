@@ -35,31 +35,31 @@ var array = generateArray(arrayLength);
 shuffle(array);
 render(array);
 
-var mark = new Array(length);
-mark.fill(-1);
+var markers = new Array(length);
+markers.fill(-1);
 var highestMarkedPos = -1;
 
 function mark(marker, position) {
-    mark[marker] = position;
+    markers[marker] = position;
     if (marker > highestMarkedPos) highestMarkedPos = marker;
 }
 
 function hasMarkerPosition(pos) {
     for (var i = 0; i <= highestMarkedPos; i++) {
-        if (mark[i] == pos) return true;
+        if (markers[i] == pos) return true;
     }
     return false;
 }
 
 function clearMark(pos) {
-    mark[pos] = -1;
+    markers[pos] = -1;
     if (pos == highestMarkedPos) {
         for (highestMarkedPos = pos - 1; highestMarkedPos >= 0 && mark[highestMarkedPos] == -1; highestMarkedPos--);
     }
 }
 
 function clearAll() {
-    mark.fill(-1, 0, highestMarkedPos);
+    markers.fill(-1, 0, highestMarkedPos);
     highestMarkedPos = 0;
 }
 
