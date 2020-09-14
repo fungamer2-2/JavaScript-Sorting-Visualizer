@@ -29,8 +29,8 @@ function shuffle(array) {
     }
 }
 
-function swap(array, i, j) {
-    var tmp = array[i]; array[i] = array[j]; array[j] = tmp;
+function swap(arr, i, j) {
+    var tmp = arr[i]; arr[i] = arr[j]; arr[j] = tmp;
 }
 
 var arrayLength = 64
