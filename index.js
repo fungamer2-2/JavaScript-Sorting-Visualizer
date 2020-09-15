@@ -90,7 +90,7 @@ selectAlgorithm.id = "AlgorithmSelector";
 
 document.body.appendChild(selectAlgorithm);
 
-for (algorithm in Algorithms) {
+for (algorithm in algorithms) {
     var option = document.createElement("option");
     option.value = algorithm;
     option.text = algorithm;
