@@ -5,7 +5,6 @@ alert("Welcome to fungamer2's Sorting Visualizer!\nNote: This visualizer is in p
 
 var delaySlider = document.getElementById("delaySlider");
 
-var selectAlgorithm = document.createElement("SELECT")
 var delayMs = 30;
 
 delaySlider.value = delayMs;
@@ -83,4 +82,17 @@ function clearAll() {
 
 var algorithms = {
     "Bubble Sort": BubbleSort
+}
+
+
+var selectAlgorithm = document.createElement("SELECT")
+selectAlgorithm.id = "AlgorithmSelector";
+
+document.body.appendChild(selectAlgorithm);
+
+for (algorithm in Algorithms) {
+    var option = document.createElement("option");
+    option.value = algorithm;
+    option.text = algorithm;
+    selectAlgorithm.appendChild(option);
 }
