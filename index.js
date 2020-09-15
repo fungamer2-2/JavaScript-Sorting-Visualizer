@@ -93,7 +93,7 @@ for (algorithm in algorithms) {
     selectAlgorithm.appendChild(option);
 }
 
-function runAlgorithm(algo) {
+async function runAlgorithm(algo) {
     shuffle(array);
     if (algo == undefined) algo = document.getElementById("algorithmSelector").value;
     algorithms[algo].run(array);
