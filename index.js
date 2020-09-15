@@ -15,7 +15,7 @@ function render(array) {
     var barWidth = (canvas.width - 0.2) / array.length;
     
     ctx.fillStyle = "white";
-    ctx.fillText("Current Algorithm: " + currentAlgorithm == null ? "None" : currentAlgorithm.name, 5, 15) 
+    ctx.fillText("Current Algorithm: " + (currentAlgorithm == null ? "None" : currentAlgorithm.name), 5, 15) 
     
     for (var i = 0; i < array.length; i++) {
         ctx.fillStyle = hasMarkerPosition(i) ? "red" : "white";
