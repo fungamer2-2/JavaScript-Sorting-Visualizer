@@ -15,7 +15,7 @@ function render(array) {
     var barWidth = canvas.width / array.length;
     
     ctx.fillStyle = "white";
-    ctx.fillText("Current Algorithm: " + currentAlgorithm, 5, 15) 
+    ctx.fillText("Current Algorithm: " + currentAlgorithm == null ? "None" : currentAlgorithm.name, 5, 15) 
     
     for (var i = 0; i < array.length; i++) {
         ctx.fillStyle = hasMarkerPosition(i) ? "red" : "white";
@@ -97,14 +97,14 @@ for (algorithm in algorithms) {
 }
 
 var isRunning = false;
-var currentAlgorithm = "None";
+var currentAlgorithm = null;
 
 async function runAlgorithm(algo) {
     if (isRunning) return;
     shuffle(array);
     if (algo == undefined) algo = document.getElementById("algorithmSelector").value;
-    currentAlgorithm = algo;
+    currentAlgorithm = algorithms[algo];
     isRunning = true;
-    await algorithms[algo].run(array);
+    await currentAlgorithm.run(array);
     isRunning = false;
 }
