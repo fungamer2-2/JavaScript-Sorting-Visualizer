@@ -85,8 +85,7 @@ var algorithms = {
 }
 
 
-var selectAlgorithm = document.createElement("SELECT")
-selectAlgorithm.id = "AlgorithmSelector";
+var selectAlgorithm = document.getElementById("algorithmSelector")
 
 document.body.appendChild(selectAlgorithm);
 
