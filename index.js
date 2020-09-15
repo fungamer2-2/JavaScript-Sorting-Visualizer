@@ -47,7 +47,6 @@ function sleep(ms) {
 var arrayLength = 64;
 
 var array = generateArray(arrayLength);
-shuffle(array);
 render(array);
 
 var markers = new Array(length);
@@ -95,6 +94,7 @@ for (algorithm in algorithms) {
 }
 
 function runAlgorithm(algo) {
+    shuffle(array);
     if (algo == undefined) algo = document.getElementById("algorithmSelector").value;
     algorithms[algo].run(array);
 }
