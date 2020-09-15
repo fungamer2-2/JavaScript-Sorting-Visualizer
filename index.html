@@ -4,7 +4,7 @@
     </head>
     <body>
         <h1>Fungamer2's Sorting Visualizer</h1>
-        <div id="delay">30 ms</div> <input type="range" min="1" max="200" value="30" step="0.1" class="slider" id="delaySlider" onchange="document.getElementById('delay').value = document.getElementById('delaySlider').value + ' ms';">
+        <div id="delay">30 ms</div> <input type="range" min="1" max="200" value="30" step="0.1" class="slider" id="delaySlider" onchange="document.getElementById('delay').innerHTML = document.getElementById('delaySlider').value + ' ms';">
         <br><br>
         <canvas id="renderer" width="600" height="360"></canvas>
         <select id="algorithmSelector"></select>
