@@ -13,4 +13,6 @@ BubbleSort.run = async function(array) {
             render(array);
         }
     }
+    
+    clearAll();
 }
