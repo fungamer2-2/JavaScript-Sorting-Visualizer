@@ -12,7 +12,7 @@ delaySlider.value = delayMs;
 function render(array) {
     ctx.fillStyle = "black";
     ctx.fillRect(0, 0, canvas.width, canvas.height);
-    var barWidth = canvas.width / array.length;
+    var barWidth = (canvas.width - 0.2) / array.length;
     
     ctx.fillStyle = "white";
     ctx.fillText("Current Algorithm: " + currentAlgorithm == null ? "None" : currentAlgorithm.name, 5, 15) 
