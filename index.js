@@ -93,3 +93,8 @@ for (algorithm in algorithms) {
     option.text = algorithm;
     selectAlgorithm.appendChild(option);
 }
+
+function runAlgorithm(algo) {
+    if (algo == undefined) algo = document.getElementById("algorithmSelector").value;
+    algorithms[algo].run(array);
+}
