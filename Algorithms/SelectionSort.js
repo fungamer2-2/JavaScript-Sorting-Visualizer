@@ -1,5 +1,5 @@
 class SelectionSort {
-    static name = "Bubble Sort";
+    static name = "Selection Sort";
 }
 
 SelectionSort.run = async function(array) {
@@ -15,4 +15,6 @@ SelectionSort.run = async function(array) {
         swap(array, i, min);
         sleep();
     }
+    
+    clearAll()
 }
