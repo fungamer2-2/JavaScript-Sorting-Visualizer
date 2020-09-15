@@ -9,7 +9,7 @@ SelectionSort.run = async function(array) {
         for (var j = i; j < array.length; j++) {
             mark(1, j);
             mark(2, min);
-            if (array[i] < array[min]) min = i;
+            if (array[j] < array[min]) min = j;
             sleep();
         }
         mark(1, i);
