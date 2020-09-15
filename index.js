@@ -101,4 +101,5 @@ async function runAlgorithm(algo) {
     if (algo == undefined) algo = document.getElementById("algorithmSelector").value;
     isRunning = true;
     await algorithms[algo].run(array);
+    isRunning = false;
 }
