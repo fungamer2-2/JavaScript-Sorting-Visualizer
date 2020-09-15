@@ -1,4 +1,4 @@
-# JavaScript-Sorting-Visualizer v0.1.1
+# JavaScript-Sorting-Visualizer v0.1.2
 
 I am working on creating a sorting algorithm visualizer in JavaScript
 
