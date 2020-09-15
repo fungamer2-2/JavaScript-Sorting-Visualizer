@@ -99,5 +99,6 @@ async function runAlgorithm(algo) {
     if (isRunning) return;
     shuffle(array);
     if (algo == undefined) algo = document.getElementById("algorithmSelector").value;
+    isRunning = true;
     await algorithms[algo].run(array);
 }
