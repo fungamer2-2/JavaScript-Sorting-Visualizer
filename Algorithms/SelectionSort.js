@@ -10,12 +10,12 @@ SelectionSort.run = async function(array) {
             mark(1, j);
             mark(2, min);
             if (array[j] < array[min]) min = j;
-            sleep();
+            await sleep();
         }
         mark(1, i);
         mark(2, min);
         swap(array, i, min);
-        sleep();
+        await sleep();
     }
     
     clearAll()
