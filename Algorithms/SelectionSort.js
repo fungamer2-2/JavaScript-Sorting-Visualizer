@@ -11,11 +11,13 @@ SelectionSort.run = async function(array) {
             mark(2, min);
             if (array[j] < array[min]) min = j;
             await sleep();
+            render(array);
         }
         mark(1, i);
         mark(2, min);
         swap(array, i, min);
         await sleep();
+        render(array);
     }
     
     clearAll()
