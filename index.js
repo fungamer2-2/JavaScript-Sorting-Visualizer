@@ -38,8 +38,9 @@ function shuffle(array) {
     }
 }
 
-function swap(arr, i, j) {
+function swap(arr, i, j, sleep=0) {
     var tmp = arr[i]; arr[i] = arr[j]; arr[j] = tmp;
+    if (sleep) {}
 }
 
 function sleep(ms) {
